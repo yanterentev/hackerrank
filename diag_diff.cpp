@@ -29,7 +29,7 @@ int secondary_diag(int N, std :: vector<std :: vector<int>>& matrix)
 	int sum = 0;
 	for(int i = 0; i < N; ++i)
 	{
-		sum += matrix[i][N - i];
+		sum += matrix[i][N - i - 1];
 	}
 	return sum;
 }
@@ -42,6 +42,6 @@ int main(int argc, char const *argv[])
 	create(N, matrix);
 	main_sum = main_diag(N, matrix);
 	sec_sum = secondary_diag(N, matrix);
-	std :: cout << fabs(main_sum - sec_sum);
+	std :: cout << abs(main_sum - sec_sum);
 	return 0;
 }
