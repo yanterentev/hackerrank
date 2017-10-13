@@ -42,6 +42,6 @@ int main(int argc, char const *argv[])
 	create(N, matrix);
 	main_sum = main_diag(N, matrix);
 	sec_sum = secondary_diag(N, matrix);
-	std :: cout << abs(main_sum - sec_sum);
+	std :: cout << fabs(main_sum - sec_sum);
 	return 0;
 }
